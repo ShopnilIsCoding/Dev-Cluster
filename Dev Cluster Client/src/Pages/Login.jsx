@@ -12,13 +12,13 @@ const Login = () => {
         
         
       </div>
-      <input type="checkbox" id="chk" aria-hidden="true" />
+      <input className="input" type="checkbox" id="chk" aria-hidden="true" />
 
       <div className="signup">
         <form>
           <label htmlFor="chk" aria-hidden="true" className="text-core">Sign up</label>
-          <input type="email" name="email" placeholder="Email" required />
-          <input type="password" name="pswd" placeholder="Password" required />
+          <input className="input" type="email" name="email" placeholder="Email" required />
+          <input className="input" type="password" name="pswd" placeholder="Password" required />
           <button className="buttonl bg-core ">Sign up</button>
         </form>
       </div>
@@ -26,8 +26,8 @@ const Login = () => {
       <div className="login">
         <form>
           <label htmlFor="chk" aria-hidden="true" className="text-info">Login</label>
-          <input type="email" name="email" placeholder="Email" required />
-          <input type="password" name="pswd" placeholder="Password" required />
+          <input className="input" type="email" name="email" placeholder="Email" required />
+          <input className="input" type="password" name="pswd" placeholder="Password" required />
           <button className="buttonl bg-core">Login</button>
         </form>
       </div>
