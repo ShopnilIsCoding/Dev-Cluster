@@ -6,12 +6,19 @@ import RootLayout from "./Layout/RootLayout";
 import Login from "./Pages/Login";
 import AuthProvider from "./Providers/AuthProvider";
 import ManageStudents from "./Pages/ManageStudents";
+import AddStudents from "./Pages/AddStudents";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout></RootLayout>,
     children:[
+      {
+        path: "/",
+        element:<AddStudents></AddStudents>
+      },
       {
         path:'/manage',
         element:<ManageStudents></ManageStudents>
@@ -29,5 +36,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <AuthProvider>
         <RouterProvider router={router} />
       </AuthProvider>
+      <ToastContainer />
   </React.StrictMode>
 );

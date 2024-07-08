@@ -31,7 +31,7 @@
     height: 100%;
 }
 
-label {
+.label {
     color: #fff;
     font-size: 2.3em;
     justify-content: center;
@@ -42,7 +42,7 @@ label {
     transition: .5s ease-in-out;
 }
 
-.input {
+.inputl {
     width: 60%;
     height: 10px;
     background: #e0dede;
@@ -80,7 +80,7 @@ label {
     transition: .8s ease-in-out;
 }
 
-.login label {
+.login .label {
     transform: scale(.6);
 }
 
@@ -88,7 +88,7 @@ label {
     transform: translateY(-500px);
 }
 
-#chk:checked~.login label {
+#chk:checked~.login .label {
     color: #F33823;
     transform: scale(1);
 }
