@@ -57,7 +57,7 @@ const AddStudents = () => {
       return;
     }
 
-    const newStudent = { ...formData, id: uuidv4() }; // Add unique ID here
+    const newStudent = { ...formData, id: uuidv4() }; 
     setStudents([...students, newStudent]);
     toast.success("Student added successfully!");
     setFormData({
@@ -88,7 +88,7 @@ const AddStudents = () => {
           {formattedDateTime}
         </div>
       </div>
-      <form className="grid grid-cols-1 md:grid-cols-3 gap-4 text-[#00000080] text-sm" onSubmit={handleSubmit}>
+      <form className="grid grid-cols-3 gap-4 text-[#00000080] text-sm" onSubmit={handleSubmit}>
         <input 
           type="text" 
           name="firstName"

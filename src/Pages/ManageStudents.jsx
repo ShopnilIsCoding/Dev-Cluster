@@ -182,7 +182,7 @@ const ManageStudents = () => {
             Filter
           </button>
           {isFilterOpen && (
-            <div className="absolute overflow-visible right-[0]  z-50 bg-white min-w-[168px] border-[0.5px] bg-base-300 border-[#647887] rounded-[10px] p-4 mt-2 flex gap-2">
+            <div className="absolute overflow-visible lg:right-[0] -right-[250%]  z-50 bg-white min-w-[168px] border-[0.5px] bg-base-300 border-[#647887] rounded-[10px] p-4 mt-2 flex gap-2 flex-wrap">
               <div className="mb-2 ">
                 <div>
                 <label className="block text-sm font-medium">Roll</label>

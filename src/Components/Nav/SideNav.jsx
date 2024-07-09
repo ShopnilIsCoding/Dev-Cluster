@@ -7,7 +7,7 @@ import { useContext } from "react";
 
 const SideNav = () => {
     const getNavLinkClass = ({ isActive }) => 
-        `flex justify-start items-center gap-4 px-6 py-3 flex-nowrap rounded-[5px] ${isActive ? 'bg-core text-[#FFFF]' : 'text-[#00000099]'}`;
+        `flex justify-start items-center gap-4 lg:px-6 px-2 py-3  lg:flex-nowrap rounded-[5px] ${isActive ? 'bg-core text-[#FFFF]' : 'text-[#00000099]'}`;
     const {  logOut } = useContext(AuthContext);
     const handleSignOut = () => {
         logOut()
@@ -17,18 +17,18 @@ const SideNav = () => {
           .catch();
       };
     return (
-        <div className="flex flex-col mt-[51px] ml-2">
+        <div className="flex flex-col flex-wrap lg:mt-[51px] lg:ml-2">
             <NavLink className={getNavLinkClass} to={'/'} exact="true">
                 <LuUsers className="text-xl" />
-                <span className="text-nowrap">Add Student</span>
+                <span className="text-nowrap ">Add Student</span>
             </NavLink>
             <NavLink className={getNavLinkClass} to={'/manage'}>
                 <LiaListSolid className="text-xl" />
-                <span className="text-nowrap">Manage Students</span>
+                <span className="text-nowrap ">Manage Students</span>
             </NavLink>
             <p onClick={handleSignOut} className="flex text-[#00000099] justify-start items-center gap-4 px-6 py-3 flex-nowrap cursor-pointer">
                 <TbLogout className="text-xl" />
-                <span className="text-nowrap">Logout</span>
+                <span className="text-nowrap ">Logout</span>
             </p>
         </div>
     );
