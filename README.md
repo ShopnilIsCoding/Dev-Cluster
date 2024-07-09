@@ -6,6 +6,13 @@ Dev Cluster Client is a web application built with React and Vite, designed to m
 
 Check out the live application [here](https://dev-cluster-client.vercel.app).
 
+## Test Credentials
+
+You can use the following credentials to test the application:
+
+- **Email**: `devcluster@gmail.com`
+- **Password**: `Cluster99`
+
 ## Features
 
 - **Add Students**: Form to add new students with details such as name, class, division, roll number, address, and profile picture.
