@@ -9,6 +9,7 @@ import ManageStudents from "./Pages/ManageStudents";
 import AddStudents from "./Pages/AddStudents";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
+import PrivateRoutes from "./Routes/PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -17,11 +18,11 @@ const router = createBrowserRouter([
     children:[
       {
         path: "/",
-        element:<AddStudents></AddStudents>
+        element:<PrivateRoutes><AddStudents></AddStudents></PrivateRoutes>
       },
       {
         path:'/manage',
-        element:<ManageStudents></ManageStudents>
+        element:<PrivateRoutes><ManageStudents></ManageStudents></PrivateRoutes>
       }
     ]
   },

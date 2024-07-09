@@ -32,7 +32,7 @@
 }
 
 .label {
-    color: #fff;
+    
     font-size: 2.3em;
     justify-content: center;
     display: flex;
@@ -76,7 +76,7 @@
     height: 460px;
     background: #eee;
     border-radius: 60% / 10%;
-    transform: translateY(-300px);
+    transform: translateY(-280px);
     transition: .8s ease-in-out;
 }
 
@@ -96,4 +96,98 @@
 #chk:checked~.signup label {
     color: #0ea5e9;
     transform: scale(.6);
+}
+
+
+/* loader */
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the loader div */
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Styling for the loading text */
+#h3 {
+    color: white;
+}
+
+/* Styling for the rings */
+#ring {
+    width: 190px;
+    height: 190px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Styling for the first ring */
+#ring:nth-child(1) {
+    border-bottom: 8px solid rgb(255, 0, 157);
+    animation: rotate1 2s linear infinite;
+}
+
+/* Animation for the first ring */
+@keyframes rotate1 {
+    from {
+        transform: rotateX(50deg) rotateZ(110deg); /* Initial rotation */
+    }
+
+    to {
+        transform: rotateX(50deg) rotateZ(470deg); /* Final rotation */
+    }
+}
+
+/* Similar styling and animation for the second, third, and fourth rings */
+#ring:nth-child(2) {
+    border-bottom: 8px solid rgb(253, 0, 55);
+    animation: rotate2 2s linear infinite;
+}
+
+@keyframes rotate2 {
+    from {
+        transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+    }
+
+    to {
+        transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+    }
+}
+
+#ring:nth-child(3) {
+    border-bottom: 8px solid rgb(85, 255, 0);
+    animation: rotate3 2s linear infinite;
+}
+
+@keyframes rotate3 {
+    from {
+        transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+    }
+
+    to {
+        transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+    }
+}
+
+#ring:nth-child(4) {
+    border-bottom: 8px solid rgb(255, 166, 0);
+    animation: rotate4 2s linear infinite;
+}
+
+@keyframes rotate4 {
+    from {
+        transform: rotateX(70deg) rotateZ(270deg);
+    }
+
+    to {
+        transform: rotateX(70deg) rotateZ(630deg);
+    }
 }
