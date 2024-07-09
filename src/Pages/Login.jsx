@@ -26,11 +26,11 @@ const Login = () => {
           const password=form.get('pswd');
           console.log(email, password)
           
-          const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-          if (!passwordRegex.test(password)) {
-              toast.warning('Password must be at least 6 characters and contain at least one uppercase and one lowercase letter.');
-              return;
-            }
+          // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+          // if (!passwordRegex.test(password)) {
+          //     toast.warning('Password must be at least 6 characters and contain at least one uppercase and one lowercase letter.');
+          //     return;
+          //   }
   
             createUser(email,password)
           .then(res=>{
