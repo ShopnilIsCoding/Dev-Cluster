@@ -4,6 +4,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -72,7 +73,9 @@ const Login = () => {
   };
   return (
     <div className="min-h-screen flex justify-center items-center font-ibm">
-      
+      <Helmet>
+            <title>Login Now! | Dev Cluster</title>
+        </Helmet>
       <div className="main">
       <div className=" bg-base-300  rounded-b-full pb-3 text-center">
         <h3 className="text-xl font-bold text-core tracking-widest">Continue With</h3>

@@ -3,6 +3,7 @@ import UseDateTime from "../Hooks/UseDateTime";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { v4 as uuidv4 } from 'uuid'; // Import UUID for unique identifiers
+import { Helmet } from "react-helmet-async";
 
 const AddStudents = () => {
   const formattedDateTime = UseDateTime(60000);
@@ -78,6 +79,9 @@ const AddStudents = () => {
 
   return (
     <div className="font-ibm">
+        <Helmet>
+            <title>Add Student | Dev Cluster</title>
+        </Helmet>
       <div className="flex justify-between items-center w-full mb-8 gap-4 flex-wrap lg:flex-nowrap flex-1">
         <p className="text-[16px] font-semibold">Add Student</p>
         <div className="text-[#000000] text-sm">

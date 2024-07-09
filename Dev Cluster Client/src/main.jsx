@@ -10,7 +10,7 @@ import AddStudents from "./Pages/AddStudents";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
 import PrivateRoutes from "./Routes/PrivateRoutes";
-
+import { HelmetProvider } from 'react-helmet-async';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,9 +34,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <HelmetProvider>
     <AuthProvider>
         <RouterProvider router={router} />
       </AuthProvider>
       <ToastContainer />
+    </HelmetProvider>
   </React.StrictMode>
 );

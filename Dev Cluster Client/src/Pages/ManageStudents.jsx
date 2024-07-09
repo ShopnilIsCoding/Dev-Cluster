@@ -7,6 +7,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Modal from 'react-modal';
 import Swal from 'sweetalert2';
+import { Helmet } from "react-helmet-async";
 
 Modal.setAppElement('#root');
 
@@ -158,6 +159,9 @@ const ManageStudents = () => {
 
   return (
     <div className="font-ibm w-full flex flex-col overflow-x-scroll">
+        <Helmet>
+            <title>Manage Student | Dev Cluster</title>
+        </Helmet>
       <div className="flex justify-around items-center w-full lg:min-h-[44px] gap-4 flex-wrap lg:flex-nowrap flex-1">
         <p className="text-[16px] font-semibold">Manage Students</p>
         <div className="bg-[#EFF3F6] flex items-center border-[0.5px_solid_#D4D8DD] h-[44px] rounded-[10px] px-[15px] gap-[3px]">
